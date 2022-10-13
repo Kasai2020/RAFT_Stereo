@@ -1,0 +1,106 @@
+2022-10-07 13:36:01,432 Segmentron INFO: Using 1 GPUs
+2022-10-07 13:36:01,432 Segmentron INFO: <__main__.demo.<locals>.Namespace object at 0x7f58ad75bad0>
+2022-10-07 13:36:01,432 Segmentron INFO: {
+        "SEED": 1024,
+        "TIME_STAMP": "",
+        "ROOT_PATH": "",
+        "PHASE": "train",
+        "DATASET": {
+                "NAME": "",
+                "MEAN": [
+                        0.5,
+                        0.5,
+                        0.5
+                ],
+                "STD": [
+                        0.5,
+                        0.5,
+                        0.5
+                ],
+                "IGNORE_INDEX": -1,
+                "WORKERS": 8,
+                "MODE": "testval"
+        },
+        "AUG": {
+                "MIRROR": true,
+                "BLUR_PROB": 0.0,
+                "BLUR_RADIUS": 0.0,
+                "COLOR_JITTER": null
+        },
+        "TRAIN": {
+                "EPOCHS": 30,
+                "BATCH_SIZE": 1,
+                "CROP_SIZE": 769,
+                "BASE_SIZE": 512,
+                "MODEL_SAVE_DIR": "workdirs/",
+                "LOG_SAVE_DIR": "workdirs/",
+                "PRETRAINED_MODEL_PATH": "",
+                "BACKBONE_PRETRAINED": true,
+                "BACKBONE_PRETRAINED_PATH": "",
+                "RESUME_MODEL_PATH": "",
+                "SYNC_BATCH_NORM": true,
+                "SNAPSHOT_EPOCH": 1
+        },
+        "SOLVER": {
+                "LR": 0.0001,
+                "OPTIMIZER": "sgd",
+                "EPSILON": 1e-08,
+                "MOMENTUM": 0.9,
+                "WEIGHT_DECAY": 0.0001,
+                "DECODER_LR_FACTOR": 10.0,
+                "LR_SCHEDULER": "poly",
+                "POLY": {
+                        "POWER": 0.9
+                },
+                "STEP": {
+                        "GAMMA": 0.1,
+                        "DECAY_EPOCH": [
+                                10,
+                                20
+                        ]
+                },
+                "WARMUP": {
+                        "EPOCHS": 0.0,
+                        "FACTOR": 0.3333333333333333,
+                        "METHOD": "linear"
+                },
+                "OHEM": false,
+                "AUX": false,
+                "AUX_WEIGHT": 0.4,
+                "LOSS_NAME": ""
+        },
+        "TEST": {
+                "TEST_MODEL_PATH": "",
+                "BATCH_SIZE": 1,
+                "CROP_SIZE": null,
+                "SCALES": [
+                        1.0
+                ],
+                "FLIP": false
+        },
+        "VISUAL": {
+                "OUTPUT_DIR": "../runs/visual/"
+        },
+        "MODEL": {
+                "MODEL_NAME": "",
+                "BACKBONE": "",
+                "BACKBONE_SCALE": 1.0,
+                "MULTI_LOSS_WEIGHT": [
+                        1.0
+                ],
+                "DEFAULT_GROUP_NUMBER": 32,
+                "DEFAULT_EPSILON": 1e-05,
+                "BN_TYPE": "BN",
+                "BN_EPS_FOR_ENCODER": null,
+                "BN_EPS_FOR_DECODER": null,
+                "OUTPUT_STRIDE": 16,
+                "BN_MOMENTUM": null,
+                "DEEPLABV3_PLUS": {
+                        "USE_ASPP": true,
+                        "ENABLE_DECODER": true,
+                        "ASPP_WITH_SEP_CONV": true,
+                        "DECODER_USE_SEP_CONV": true
+                }
+        },
+        "DEMO_DIR": "demo/imgs"
+}

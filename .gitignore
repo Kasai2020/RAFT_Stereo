@@ -1,0 +1,8 @@
+datasets/
+vis_dir/
+build/
+demo_output/
+pcds/
+models/
+__pycache__/
+*.ply
