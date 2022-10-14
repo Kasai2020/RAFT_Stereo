@@ -5,10 +5,11 @@ import cv2
 from matplotlib import pyplot as plt
 import open3d as o3d
 import os
-from RAFT_Stereo.visualization import VisOpen3D
+from visualization import VisOpen3D
 
 def transform_depth(w, h, K_depth, K_col, ext, depth, color):
     # project into 3D
+    print(color.dtype)
     o3d_rgb = o3d.geometry.Image(color)
     o3d_depth = o3d.geometry.Image(depth)
     o3d_rgbd = o3d.geometry.RGBDImage.create_from_color_and_depth(
@@ -37,7 +38,6 @@ def transform_depth(w, h, K_depth, K_col, ext, depth, color):
 
     # capture images
     depth_full = vis.capture_depth_float_buffer()
-    vis.destroy_window()
     del vis
 
     depth_vis = (depth / 1000.0)
