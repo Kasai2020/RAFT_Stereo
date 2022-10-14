@@ -37,6 +37,7 @@ def transform_depth(w, h, K_depth, K_col, ext, depth, color):
 
     # capture images
     depth_full = vis.capture_depth_float_buffer()
+    vis.destroy_window()
     del vis
 
     depth_vis = (depth / 1000.0)
